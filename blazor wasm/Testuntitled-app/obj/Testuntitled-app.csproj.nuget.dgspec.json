@@ -1,0 +1,188 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Downloads\\CRUD-add-row\\blazor wasm\\Testuntitled-app\\Testuntitled-app.csproj": {}
+  },
+  "projects": {
+    "D:\\Downloads\\CRUD-add-row\\blazor wasm\\Testuntitled-app\\Testuntitled-app.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Downloads\\CRUD-add-row\\blazor wasm\\Testuntitled-app\\Testuntitled-app.csproj",
+        "projectName": "Testuntitled-app",
+        "projectPath": "D:\\Downloads\\CRUD-add-row\\blazor wasm\\Testuntitled-app\\Testuntitled-app.csproj",
+        "packagesPath": "C:\\Users\\mvenkov\\.nuget\\packages\\",
+        "outputPath": "D:\\Downloads\\CRUD-add-row\\blazor wasm\\Testuntitled-app\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "D:\\Downloads\\CRUD-add-row\\blazor wasm\\NuGet.Config",
+          "C:\\Users\\mvenkov\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "D:\\Downloads\\New folder": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\Downloads\\CRUD-add-row\\blazor wasm\\untitled-app\\untitled-app.csproj": {
+                "projectPath": "D:\\Downloads\\CRUD-add-row\\blazor wasm\\untitled-app\\untitled-app.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "IgniteUI.Blazor": {
+              "target": "Package",
+              "version": "[22.2.50, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.1.0, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.18.1, )"
+            },
+            "bunit": {
+              "target": "Package",
+              "version": "[1.9.8, )"
+            },
+            "bunit.core": {
+              "target": "Package",
+              "version": "[1.9.8, )"
+            },
+            "coverlet.collector": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.2, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.4.1, )"
+            },
+            "xunit.runner.visualstudio": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.4.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.103\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Downloads\\CRUD-add-row\\blazor wasm\\untitled-app\\untitled-app.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Downloads\\CRUD-add-row\\blazor wasm\\untitled-app\\untitled-app.csproj",
+        "projectName": "untitled-app",
+        "projectPath": "D:\\Downloads\\CRUD-add-row\\blazor wasm\\untitled-app\\untitled-app.csproj",
+        "packagesPath": "C:\\Users\\mvenkov\\.nuget\\packages\\",
+        "outputPath": "D:\\Downloads\\CRUD-add-row\\blazor wasm\\untitled-app\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "D:\\Downloads\\CRUD-add-row\\blazor wasm\\NuGet.Config",
+          "C:\\Users\\mvenkov\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "D:\\Downloads\\New folder": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "IgniteUI.Blazor": {
+              "target": "Package",
+              "version": "[22.2.50, )"
+            },
+            "Microsoft.AspNetCore.Components.WebAssembly": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.AspNetCore.Components.WebAssembly.DevServer": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Runtime.Mono.browser-wasm",
+              "version": "[6.0.14, 6.0.14]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.103\\RuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "browser-wasm": {
+          "#import": []
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,56 @@
+@page "/"
+@inject NorthWindCRUD.INorthWindCRUDService northWindCRUDService
+
+<div class="row-layout master-view-container">
+    <IgbGrid Data="northWindCRUDCategory" PrimaryKey="CategoryId" DisplayDensity="DisplayDensity.Cosy" RowEditable="true" AllowFiltering="true" FilterMode="FilterMode.ExcelStyleFilter" AutoGenerate="false" class="ig-typography grid" RowAdded="CategoryRowAdded" RowDeleted="CategoryRowDeleted" RowEditDone="CategoryRowEditDone" master-view-scope>
+        <IgbColumn Field="CategoryId" DataType="GridColumnDataType.Number" Header="categoryId" Sortable="true" Selectable="false"></IgbColumn>
+        <IgbColumn Field="Description" DataType="GridColumnDataType.String" Header="description" Sortable="true" Selectable="false"></IgbColumn>
+        <IgbColumn Field="Name" DataType="GridColumnDataType.String" Header="name" Sortable="true" Selectable="false"></IgbColumn>
+        <IgbActionStrip>
+            <IgbGridPinningActions></IgbGridPinningActions>
+            <IgbGridEditingActions AddRow="true"></IgbGridEditingActions>
+        </IgbActionStrip>
+    </IgbGrid>
+</div>
+
+@code {
+    private List<NorthWindCRUD.CategoryType> northWindCRUDCategory = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        northWindCRUDCategory = await this.northWindCRUDService.GetCategory() ?? northWindCRUDCategory;
+    }
+
+    private async void CategoryRowAdded(IgbRowDataEventArgs args)
+    {
+        var category = args.Detail.Data as NorthWindCRUD.CategoryType;
+        if (category != null)
+        {
+            var result = await this.northWindCRUDService.PostCategory(category);
+            northWindCRUDCategory[^1] = result!;
+            northWindCRUDCategory = northWindCRUDCategory.ToList();
+            StateHasChanged();
+        }
+    }
+
+    private void CategoryRowDeleted(IgbRowDataEventArgs args)
+    {
+        var category = args.Detail.Data as NorthWindCRUD.CategoryType;
+        if (category != null)
+        {
+            this.northWindCRUDService.DeleteCategory(category.CategoryId.ToString());
+        }
+    }
+
+    private void CategoryRowEditDone(IgbGridEditDoneEventArgs args)
+    {
+        if(args.Detail.IsAddRow == false)
+        {
+            var category = args.Detail.RowData as NorthWindCRUD.CategoryType;
+            if (category != null)
+            {
+                this.northWindCRUDService.PutCategory(category);
+            }
+        }
+    }
+}
