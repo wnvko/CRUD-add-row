@@ -1,9 +1,15 @@
-<igx-grid [data]="northWindCRUDCategory" primaryKey="categoryId" displayDensity="cosy" [rowEditable]="true" [allowFiltering]="true" filterMode="excelStyleFilter" (rowAdded)="categoryRowAdded($event)" (rowEditDone)="categoryRowEditDone($event)" (rowDeleted)="categoryRowDeleted($event)" class="grid">
-  <igx-column field="categoryId" dataType="number" header="categoryId" [sortable]="true" [selectable]="false"></igx-column>
-  <igx-column field="description" dataType="string" header="description" [sortable]="true" [selectable]="false"></igx-column>
+<igx-grid width="800px" height="600px" [data]="northWindCRUDCategory" primaryKey="categoryId" displayDensity="cosy"
+  [rowEditable]="true" (rowAdded)="categoryRowAdded($event)" (rowEditDone)="categoryRowEditDone($event)"
+  (rowDeleted)="categoryRowDeleted($event)" class="grid">
+  <igx-column field="categoryId" dataType="number" header="categoryId" [sortable]="true" [selectable]="false">
+  </igx-column>
+  <igx-column field="description" dataType="string" header="description" [sortable]="true" [selectable]="false">
+  </igx-column>
   <igx-column field="name" dataType="string" header="name" [sortable]="true" [selectable]="false"></igx-column>
   <igx-action-strip>
     <igx-grid-pinning-actions></igx-grid-pinning-actions>
     <igx-grid-editing-actions [addRow]="true"></igx-grid-editing-actions>
   </igx-action-strip>
 </igx-grid>
+<igx-combo [data]="northWindCRUDCategory" [displayKey]="'name'" [valueKey]="'categoryId'"></igx-combo>
+<button igxButton (click)="addPredefinedRow()">Add Row</button>

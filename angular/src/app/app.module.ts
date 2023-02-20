@@ -4,7 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MasterViewComponent } from './master-view/master-view.component';
-import { IgxGridModule, IgxActionStripModule } from '@infragistics/igniteui-angular';
+import { IgxGridModule, IgxActionStripModule, IgxComboModule, IgxButtonModule } from '@infragistics/igniteui-angular';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -18,10 +18,12 @@ import { HttpClientModule } from '@angular/common/http';
     HammerModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    IgxGridModule,
-    IgxActionStripModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    IgxActionStripModule,
+    IgxButtonModule,
+    IgxComboModule,
+    IgxGridModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

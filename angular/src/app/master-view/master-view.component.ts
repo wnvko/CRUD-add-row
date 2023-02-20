@@ -40,4 +40,12 @@ export class MasterViewComponent implements OnInit {
   public categoryRowDeleted(args: IRowDataEventArgs) {
     this.northWindCRUDService.deleteCategory(args.data.categoryId).pipe(first()).subscribe();
   }
+
+  public addPredefinedRow() {
+    const newItem = {
+      name: 'New Item',
+      description: `Created at ${new Date().toDateString()}`
+    };
+    this.northWindCRUDService.postCategory(newItem).pipe(first()).subscribe();
+  }
 }
